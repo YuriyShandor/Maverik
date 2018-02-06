@@ -1,5 +1,7 @@
 // to compile...
 
+$darkLime: #cb8d53;
+
 @import "./_components/_open-sans.scss";
 @import "./_components/_nav-bar.scss";
 
@@ -80,7 +82,7 @@ body {
         width: 18px;
         height: 18px;
         border-radius: 18px;
-        background: #cb8d53;
+        background: $darkLime;
         display: -ms-flex;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -156,7 +158,72 @@ body {
   }
 }
 
+.banner {
+  margin-top: 130px;
+  width: 100%;
+  padding: 64px 0;
+  background: url(../img/banner.jpg) no-repeat center / cover;
 
+  &-block {
+    padding: 40px 15px 36px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    * {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 60px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+
+      span {
+        color: $darkLime;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 300;
+      color: #fffefe;
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
+
+    button {
+      padding: 15px 60px;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      color: #fffefe;
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-transition: all, .5s;
+      transition: all, .5s;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
