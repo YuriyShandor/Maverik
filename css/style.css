@@ -1326,3 +1326,120 @@ body {
     margin-top: 25px;
   }
 }
+
+.modal-card {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 200;
+}
+
+.modal-card__content {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 770px;
+  padding: 100px 100px 55px 96px;
+  background: #fff;
+  position: relative;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.modal-card__content .close-span {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 56px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.modal-card__content h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #383d43;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-card__content span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8494ab;
+}
+
+.modal-card__content form {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.modal-card__content form input {
+  height: 40px;
+  background: #fff;
+  border: 1px solid #e4e9ee;
+}
+
+.modal-card__content form .card {
+  width: 350px;
+  height: 235px;
+  background: #f7f8f8;
+  border: 1px solid #e4e9ee;
+  border-radius: 10px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-top: 25px;
+}
+
+.modal-card__content form .card-number__inputs {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.modal-card__content form .card-number__inputs input {
+  width: 65px;
+  margin-right: 9px;
+}
+
+.modal-card__content form .card-dates {
+  width: 165px;
+  margin-bottom: 10px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.modal-card__content form .card-dates select {
+  height: 40px;
+  margin-right: 10px !important;
+}
+
+.modal-card__content form .card-dates .nice-select {
+  border-radius: 0;
+  padding-left: 12px;
+  padding-right: 34px;
+}
