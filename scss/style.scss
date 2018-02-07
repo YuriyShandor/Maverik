@@ -301,7 +301,29 @@ body {
   }
 }
 
+.catalog {
+  font-size: 14px;
+  font-weight: 300;
+  color: #606060;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ebebeb;
 
+  a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #606060;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      color: $darkLime;
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
