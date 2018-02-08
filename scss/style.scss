@@ -1095,6 +1095,7 @@ body {
         height: 40px;
         background: #fff;
         border: 1px solid #e4e9ee;
+        padding-left: 10px;
       }
 
       .card {
@@ -1148,7 +1149,91 @@ body {
             border-radius: 0;
             padding-left: 12px;
             padding-right: 34px;
+            border: 1px solid #e4e9ee;
+
+            &::after {
+              border-bottom: 1px solid #c9d0d7;
+              border-right: 1px solid #c9d0d7;
+              height: 7px;
+              right: 10px;
+              width: 7px;
+            }
           }
+        }
+
+        #card-holder {
+          width: 315px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #bec6cf;
+
+          &::-webkit-input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #bec6cf;
+          }
+
+          &:-ms-input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #bec6cf;
+          }
+
+          &::-ms-input-placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #bec6cf;
+          }
+
+          &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: #bec6cf;
+          }
+        }
+      }
+
+      .card_02 {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        margin-left: -145px;
+        margin-top: 28px;
+
+        div {
+          width: 100%;
+          height: 42px;
+          background: #e4e9ee;
+        }
+
+        span {
+          margin-top: 19px;
+          margin-right: 26px;
+        }
+
+        input {
+          width: 135px;
+          margin-right: 15px;
+        }
+      }
+
+      .card_01 {
+        z-index: 202;
+      }
+
+      #btn-pay {
+        padding: 15px 50px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        background: $darkLime;
+        border: none;
+        cursor: pointer;
+        -webkit-transition: all, .5s;
+        transition: all, .5s;
+
+        &:hover {
+          background: darken($darkLime, 10%);
         }
       }
     }

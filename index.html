@@ -312,7 +312,7 @@
       <h5>Данные банковской карты</h5>
 
       <form action="">
-        <div class="card">
+        <div class="card card_01">
           <span>Номер карты</span>
           <div class="card-number__inputs">
             <input type="text">
@@ -323,9 +323,6 @@
           <span>Срок действия</span>
           <div class="card-dates">
             <select name="" id="">
-              <option value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
               <option value="04">04</option>
               <option value="05">05</option>
               <option value="06">06</option>
@@ -344,14 +341,14 @@
               <option value="2022">2022</option>
             </select>
           </div>
-          <input type="text" placeholder="Держатель карты">
+          <input type="text" id="card-holder" placeholder="Держатель карты">
         </div>
-        <div class="card">
+        <div class="card card_02">
           <div></div>
           <span>Код CVV2 / CVC2</span>
           <input type="text">
         </div>
-        <button>Оплатить</button>
+        <button id="btn-pay">Оплатить</button>
       </form>
     </div>
   </div>
