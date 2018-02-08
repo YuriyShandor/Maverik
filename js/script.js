@@ -157,5 +157,4 @@ $(document).ready(function() {
       $(`.product__${item}`).removeClass('product_hide');
     });
   });
-
 });

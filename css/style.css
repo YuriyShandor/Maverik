@@ -57,7 +57,7 @@
   display: block;
   width: 0;
   height: 1px;
-  background: #000;
+  background: #cb8d53;
   -webkit-transition: all, .3s;
   transition: all, .3s;
 }
@@ -67,7 +67,7 @@
 }
 
 .header-nav .nav-bar .nav-item:hover .nav-link {
-  font-weight: 500;
+  color: #cb8d53;
 }
 
 .header-nav .nav-bar .nav-item .nav-link {
@@ -81,6 +81,8 @@
   font-size: 16px;
   font-weight: 300;
   color: #2b2b2b;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1507,6 +1509,7 @@ body {
   align-items: flex-end;
   margin-left: -145px;
   margin-top: 28px;
+  padding-left: 0 !important;
 }
 
 .modal-card__content form .card_02 div {
@@ -1563,4 +1566,45 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 850px) {
+  .modal-card {
+    height: 100vh;
+  }
+  .modal-card__content {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 500px;
+    padding: 30px 30px 20px 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .modal-card__content .close-span {
+    font-size: 42px;
+  }
+  .modal-card__content h5 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .modal-card__content span {
+    font-size: 14px;
+  }
+  .modal-card__content form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .modal-card__content form .card_02 {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .modal-card__content form #btn-pay {
+    margin-top: 25px;
+  }
 }
