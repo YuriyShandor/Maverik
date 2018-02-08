@@ -149,9 +149,9 @@ $(document).ready(function() {
 	});
 
   //Sort products by category
-  var products = ['blankets', 'covers'];
+  var categoryProducts = ['blankets', 'covers'];
 
-  products.forEach(function(item) {
+  categoryProducts.forEach(function(item) {
     $(`.chose-category__${item}`).click(function(){
       $('.product__all').addClass('product_hide');
       $(`.product__${item}`).removeClass('product_hide');
