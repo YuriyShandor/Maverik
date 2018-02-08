@@ -427,6 +427,13 @@ body {
           font-weight: 300;
           color: #606060;
           margin-top: 15px;
+          cursor: pointer;
+          -webkit-transition: all, .3s;
+          transition: all, .3s;
+
+          &:hover {
+            color: $darkLime;
+          }
 
           &:last-child {
             margin-bottom: 30px;
@@ -704,6 +711,10 @@ body {
     padding: 8px 17px 10px 10px;
     background: $darkLime;
   }
+}
+
+.product_hide {
+  display: none;
 }
 
 @media only screen and (max-width : 1199px) {

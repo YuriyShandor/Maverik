@@ -17,11 +17,25 @@ $(document).ready(function() {
     $('.nav-bar').slideToggle('0.5s');
   });
 
+  // Sort goods by price
+  var products = $('.product');
+
+  $(".sort-select").change(function(){
+    if ($(this).val() == 0) return false;
+
+    if ($(this).val() == "price") {
+      var numericallyOrderedDivs = products.sort(function (a, b) {
+        return +$(a).find(".product__price").text().slice(0, -3) > +$(b).find(".product__price").text().slice(0, -3);
+      });
+      $(".products").html(numericallyOrderedDivs);
+    }
+  });
+
   //Price clider by jQuery Slider UI
   $("#price").slider({
 	  min: 70,
-	  max: 800,
-	  values: [70,800],
+	  max: 900,
+	  values: [70,900],
 	  range: true,
     stop: function(event, ui) {
 		  jQuery("input#minCost").val(jQuery("#price").slider("values",0));
@@ -30,7 +44,10 @@ $(document).ready(function() {
     slide: function(event, ui){
 		  jQuery("input#minCost").val(jQuery("#price").slider("values",0));
 		  jQuery("input#maxCost").val(jQuery("#price").slider("values",1));
-    }
+
+      priceSliderValMin = jQuery("#price").slider("values",0);
+      priceSliderValMax = jQuery("#price").slider("values",1);
+    },
   });
 
   $("input#minCost").change(function(){
@@ -49,7 +66,7 @@ $(document).ready(function() {
 	  var value1=$("input#minCost").val();
 	  var value2=$("input#maxCost").val();
 
-	  if (value2 > 800) { value2 = 800; jQuery("input#maxCost").val(250)}
+	  if (value2 > 900) { value2 = 900; jQuery("input#maxCost").val(250)}
 
 	  if(parseInt(value1) > parseInt(value2)){
 		  value2 = value1;
@@ -131,20 +148,14 @@ $(document).ready(function() {
 		}
 	});
 
-  // Sort goods by price
+  //Sort products by category
+  var products = ['blankets', 'covers'];
 
-
-  $(".sort-select").change(function(){
-    if ($(this).val() == 0) return false;
-
-    if ($(this).val() == "price") {
-      var products = $('.product');
-
-      var numericallyOrderedDivs = products.sort(function (a, b) {
-        return +$(a).find(".product__price").text().slice(0, -3) > +$(b).find(".product__price").text().slice(0, -3);
-      });
-      $(".products").html(numericallyOrderedDivs);
-    }
+  products.forEach(function(item) {
+    $(`.chose-category__${item}`).click(function(){
+      $('.product__all').addClass('product_hide');
+      $(`.product__${item}`).removeClass('product_hide');
+    });
   });
 
 });

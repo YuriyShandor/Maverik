@@ -759,6 +759,13 @@ body {
   font-weight: 300;
   color: #606060;
   margin-top: 15px;
+  cursor: pointer;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+}
+
+.main-content__sidebar .categories .panel li:hover {
+  color: #cb8d53;
 }
 
 .main-content__sidebar .categories .panel li:last-child {
@@ -1029,6 +1036,10 @@ body {
   color: #fff;
   padding: 8px 17px 10px 10px;
   background: #cb8d53;
+}
+
+.product_hide {
+  display: none;
 }
 
 @media only screen and (max-width: 1199px) {
