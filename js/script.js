@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('select').niceSelect();
-  
+
   // Change header on scroll
   $(window).scroll(function(){
     if ($(window).scrollTop()) {
@@ -71,5 +71,56 @@ $(document).ready(function() {
         panel.style.height = panel.scrollHeight + "px";
       }
     });
-  }
+  };
+
+  //Validate card form
+  $('#card-holder').on('input', function() {
+		if ($(this).val() != '') {
+			var pattern = /^[a-z]+$/;
+			if (pattern.test($(this).val()) && $(this).val().length > 4) {
+        $(this).css({
+					'outline-color': '#000'
+				});
+				$('#card-holder_valid').text('');
+			} else {
+				$(this).css({
+					'outline-color': 'red'
+				});
+				$('#card-holder_valid').text('Только латинские символы не менее четырех');
+			}
+		}
+	});
+  $('.cardNumber').on('input', function() {
+		if ($(this).val() != '') {
+			var pattern = /^[0-9]+$/;
+			if (pattern.test($(this).val()) && $(this).val().length == 4) {
+        $(this).css({
+					'outline-color': '#000'
+				});
+				$('#card-number').text('');
+			} else {
+				$(this).css({
+					'outline-color': 'red'
+				});
+				$('#card-number').text('Только 4 цифры');
+			}
+		}
+	});
+  $('#input-cvv').on('input', function() {
+		if ($(this).val() != '') {
+			var pattern = /^[0-9]+$/;
+			if (pattern.test($(this).val()) && $(this).val().length == 3) {
+        $(this).css({
+					'outline-color': '#000'
+				});
+				$('#cvv-input').text('');
+			} else {
+				$(this).css({
+					'outline-color': 'red'
+				});
+				$('#cvv-input').text('Только 3 цифры');
+			}
+		}
+	});
+
 });

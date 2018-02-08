@@ -311,18 +311,19 @@
 
       <h5>Данные банковской карты</h5>
 
-      <form action="">
+      <form action="" class="card-form">
         <div class="card card_01">
           <span>Номер карты</span>
           <div class="card-number__inputs">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+            <input type="number" name="cardNumber" class="cardNumber" required>
+            <input type="number" name="cardNumber" class="cardNumber" required>
+            <input type="number" name="cardNumber" class="cardNumber" required>
+            <input type="number" name="cardNumber" class="cardNumber" required>
           </div>
+          <span id="card-number" class="valid"></span>
           <span>Срок действия</span>
           <div class="card-dates">
-            <select name="" id="">
+            <select name="" id="" required>
               <option value="04">04</option>
               <option value="05">05</option>
               <option value="06">06</option>
@@ -333,7 +334,7 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <select name="" id="">
+            <select name="" id="" required>
               <option value="2018">2018</option>
               <option value="2019">2019</option>
               <option value="2020">2020</option>
@@ -341,12 +342,14 @@
               <option value="2022">2022</option>
             </select>
           </div>
-          <input type="text" id="card-holder" placeholder="Держатель карты">
+          <input type="text" id="card-holder" name="cardHolder" placeholder="Держатель карты" required>
+          <span id="card-holder_valid" class="valid"></span>
         </div>
         <div class="card card_02">
           <div></div>
           <span>Код CVV2 / CVC2</span>
-          <input type="text">
+          <input type="number" id="input-cvv" required>
+          <span id="cvv-input" class="valid"></span>
         </div>
         <button id="btn-pay">Оплатить</button>
       </form>
@@ -357,6 +360,8 @@
   <script src="js/bootstrap.js" type="text/javascript"></script>
   <script src="js/jquery-ui.js" type="text/javascript"></script>
   <script src="js/jquery.nice-select.js" type="text/javascript"></script>
+  <script src="js/jquery.validate.js" type="text/javascript"></script>
+  <script src="js/additional-methods.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

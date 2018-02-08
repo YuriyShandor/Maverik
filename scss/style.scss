@@ -1096,6 +1096,7 @@ body {
         background: #fff;
         border: 1px solid #e4e9ee;
         padding-left: 10px;
+        outline-color: #000;
       }
 
       .card {
@@ -1236,11 +1237,24 @@ body {
           background: darken($darkLime, 10%);
         }
       }
+
+      .valid {
+        font-size: 10px;
+        font-weight: 300;
+        color: #000;
+      }
     }
   }
 }
 
-
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 @media only screen and (max-width : 1199px) {
 
