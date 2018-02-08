@@ -1043,6 +1043,10 @@ body {
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
 
   &__content {
     margin: 0 auto;
@@ -1245,6 +1249,10 @@ body {
       }
     }
   }
+}
+
+.modal-card_active {
+  display: block;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

@@ -73,6 +73,14 @@ $(document).ready(function() {
     });
   };
 
+  // Display card modal
+  $('.product__cart').click(function() {
+    $('.modal-card').addClass('modal-card_active');
+  })
+  $('.close-span').click(function() {
+    $('.modal-card').removeClass('modal-card_active');
+  })
+
   //Validate card form
   $('#card-holder').on('input', function() {
 		if ($(this).val() != '') {
