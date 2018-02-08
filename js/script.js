@@ -131,4 +131,20 @@ $(document).ready(function() {
 		}
 	});
 
+  // Sort goods by price
+
+
+  $(".sort-select").change(function(){
+    if ($(this).val() == 0) return false;
+
+    if ($(this).val() == "price") {
+      var products = $('.product');
+
+      var numericallyOrderedDivs = products.sort(function (a, b) {
+        return +$(a).find(".product__price").text().slice(0, -3) > +$(b).find(".product__price").text().slice(0, -3);
+      });
+      $(".products").html(numericallyOrderedDivs);
+    }
+  });
+
 });
